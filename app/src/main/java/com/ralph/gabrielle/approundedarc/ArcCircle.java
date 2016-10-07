@@ -1,4 +1,4 @@
-package project.forward.com.approundedarc;
+package com.ralph.gabrielle.approundedarc;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
@@ -63,7 +64,7 @@ public class ArcCircle extends View {
         duration = typedArray.getInteger(R.styleable.ArcCircle_duration, 2000);
         textColor = typedArray.getColor(R.styleable.ArcCircle_textColor, Color.WHITE);
         textSize = typedArray.getDimension(R.styleable.ArcCircle_textSize, 20);
-        thumbStroke = (int) typedArray.getDimension(R.styleable.ArcCircle_stroke, 50);
+        thumbStroke = (int) typedArray.getDimension(R.styleable.ArcCircle_thumbStroke, 50);
 
         typedArray.recycle();
         arcPaint = createPaint(color, stroke);
@@ -134,8 +135,8 @@ public class ArcCircle extends View {
 
         canvas.drawArc(oval, 270, 360, false, trackPaint);
         canvas.drawArc(oval, 270, angle, false, arcPaint);
-        canvas.drawCircle(endX, endY, 60, percentContainerPaint);
-        canvas.drawCircle(endX, endY, 50, percentPaint);
+        canvas.drawCircle(endX, endY, thumbStroke + 5, percentContainerPaint);
+        canvas.drawCircle(endX, endY, thumbStroke, percentPaint);
 
         float textHeight = textPaint.descent() - textPaint.ascent();
         float textOffset = (textHeight / 2) - textPaint.descent();

@@ -1,8 +1,7 @@
-package project.forward.com.approundedarc;
+package com.ralph.gabrielle.approundedarc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
 

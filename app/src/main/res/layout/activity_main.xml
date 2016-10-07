@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <project.forward.com.approundedarc.ArcCircle
-            android:id="@+id/progress"
-            android:layout_width="500dp"
-            android:layout_height="500dp"
-            android:layout_centerInParent="true"
-            app:duration="2"
-            app:progress="65"
-            app:progressColor="@color/progress"
-            app:startAnimation="true"
-            app:stroke="60dp"
-            app:textSize="20dp"
-            app:thumbStroke="60dp" />
-
-
-    </RelativeLayout>
-
+    <com.ralph.gabrielle.approundedarc.ArcCircle
+        android:id="@+id/progress"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        app:duration="2"
+        app:progress="65"
+        app:progressColor="@color/progress"
+        app:startAnimation="true"
+        app:stroke="50dp"
+        app:textSize="20dp"
+        app:thumbStroke="40dp" />
 
 </LinearLayout>
